@@ -1,4 +1,3 @@
-//#define _CRT_SECURE_NO_DEPRECATE
 #include <iostream>
 #include <pcl/io/pcd_io.h>
 #include <pcl/point_types.h>
@@ -103,7 +102,7 @@ void seg_cloud(pcl::PointCloud<pcl::PointXYZ>::ConstPtr source)
 	ec.setInputCloud(cloud_filtered);
 	ec.extract(cluster_indices);
 	finish = clock();
-	cout << "Å·Ê½¾ÛÀà£º"<<finish - start << endl;
+	cout << "cost time"<<finish - start << endl;
 	//use largest cluster
 	//if(cluster_indices.size()!=0)
 	for (int i = 0; i < cluster_indices.size();i++)
