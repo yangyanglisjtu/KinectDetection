@@ -42,7 +42,7 @@ void seg_cloud(pcl::PointCloud<pcl::PointXYZ>::ConstPtr source)
 	// Compute the features
 	ne.compute(*normals);
 	finish = clock();
-	cout << "Ô¤´¦Àí£º" << finish - start << endl;
+	cout << "Time:" << finish - start << endl;
 
 	start = clock();
 	// Create the segmentation object for the planar model and set all the parameters
@@ -55,7 +55,7 @@ void seg_cloud(pcl::PointCloud<pcl::PointXYZ>::ConstPtr source)
 	seg.setNormalDistanceWeight(0);
 	seg.setMethodType(pcl::SAC_RANSAC);
 	seg.setMaxIterations(100);
-	seg.setDistanceThreshold(0.008);
+	seg.setDistanceThreshold(0.005);
 	// Segment the largest planar component from the remaining cloud
 	seg.setInputCloud(cloud_filtered);
 	seg.setInputNormals(normals);
@@ -66,8 +66,9 @@ void seg_cloud(pcl::PointCloud<pcl::PointXYZ>::ConstPtr source)
 	extract.setIndices(inliers);
 	extract.setNegative(false);
 	extract.filter(*cloud_plane);
+	//pcl::visualization::PointCloudColorHandlerCustom<pcl::PointXYZ> single_color(cloud_plane,255,255,255);
 	pcl::visualization::PointCloudColorHandlerRandom<pcl::PointXYZ> single_color(cloud_plane);
-	viewer.addPointCloud(cloud_plane);
+	viewer.addPointCloud(cloud_plane,single_color,"plane");
 	//std::cout << "PointCloud representing the planar component: " << cloud_plane->points.size() << " data points." << std::endl;
 	finish = clock();
 	cout << "RANSAC:" << finish - start << endl;
@@ -107,10 +108,10 @@ void seg_cloud(pcl::PointCloud<pcl::PointXYZ>::ConstPtr source)
 	//if(cluster_indices.size()!=0)
 	for (int i = 0; i < cluster_indices.size();i++)
 	{
-		//cout << cluster_indices.size() << " clusters found";
-		if (cluster_indices.size() > 1)
+		cout << cluster_indices.size() << " clusters found";
+		//if (cluster_indices.size() > 1)
 			//cout << " Using largest one...";
-		cout << endl;
+		//cout << endl;
 		pcl::IndicesPtr indices(new std::vector<int>);
 		*indices = cluster_indices[i].indices;
 		extract.setInputCloud(cloud_filtered);
@@ -118,9 +119,10 @@ void seg_cloud(pcl::PointCloud<pcl::PointXYZ>::ConstPtr source)
 		extract.setNegative(false);
 		extract.filter(*segmented);
 		char cloudname[20];
-		sprintf(cloudname,"%d",i);
+		sprintf(cloudname,"%d",i+1);
 		//sprintf(cloudname, "%d", 0);
-		pcl::visualization::PointCloudColorHandlerRandom<pcl::PointXYZ> clusterColorHandle(segmented);
+	        //pcl::visualization::PointCloudColorHandlerCustom<pcl::PointXYZ> clusterColorHandle(segmented,255,0,0);
+	        pcl::visualization::PointCloudColorHandlerRandom<pcl::PointXYZ> clusterColorHandle(segmented);
 		//pcl::visualization::PointCloudColorHandler 
 		viewer.addPointCloud(segmented, clusterColorHandle,cloudname);
 	}
