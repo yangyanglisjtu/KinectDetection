@@ -47,10 +47,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/liyangyang/KinectDetection/source
+CMAKE_SOURCE_DIR = /home/yang/KinectDetection/source
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/liyangyang/KinectDetection/source/build
+CMAKE_BINARY_DIR = /home/yang/KinectDetection/source/build
 
 #=============================================================================
 # Target rules for target CMakeFiles/KinectDetection.dir
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/liyangyang/KinectDetection/source/build
 CMakeFiles/KinectDetection.dir/all:
 	$(MAKE) -f CMakeFiles/KinectDetection.dir/build.make CMakeFiles/KinectDetection.dir/depend
 	$(MAKE) -f CMakeFiles/KinectDetection.dir/build.make CMakeFiles/KinectDetection.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/liyangyang/KinectDetection/source/build/CMakeFiles  1
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/yang/KinectDetection/source/build/CMakeFiles  1
 	@echo "Built target KinectDetection"
 .PHONY : CMakeFiles/KinectDetection.dir/all
 
@@ -69,9 +69,9 @@ all: CMakeFiles/KinectDetection.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/KinectDetection.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/liyangyang/KinectDetection/source/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/yang/KinectDetection/source/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/KinectDetection.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/liyangyang/KinectDetection/source/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/yang/KinectDetection/source/build/CMakeFiles 0
 .PHONY : CMakeFiles/KinectDetection.dir/rule
 
 # Convenience name for target.

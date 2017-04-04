@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/liyangyang/KinectDetection/source
+CMAKE_SOURCE_DIR = /home/yang/KinectDetection/source
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/liyangyang/KinectDetection/source/build
+CMAKE_BINARY_DIR = /home/yang/KinectDetection/source/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/KinectDetection.dir/depend.make
@@ -51,17 +51,17 @@ include CMakeFiles/KinectDetection.dir/flags.make
 
 CMakeFiles/KinectDetection.dir/main.cpp.o: CMakeFiles/KinectDetection.dir/flags.make
 CMakeFiles/KinectDetection.dir/main.cpp.o: ../main.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/liyangyang/KinectDetection/source/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/yang/KinectDetection/source/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/KinectDetection.dir/main.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/KinectDetection.dir/main.cpp.o -c /home/liyangyang/KinectDetection/source/main.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/KinectDetection.dir/main.cpp.o -c /home/yang/KinectDetection/source/main.cpp
 
 CMakeFiles/KinectDetection.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/KinectDetection.dir/main.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/liyangyang/KinectDetection/source/main.cpp > CMakeFiles/KinectDetection.dir/main.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/yang/KinectDetection/source/main.cpp > CMakeFiles/KinectDetection.dir/main.cpp.i
 
 CMakeFiles/KinectDetection.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/KinectDetection.dir/main.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/liyangyang/KinectDetection/source/main.cpp -o CMakeFiles/KinectDetection.dir/main.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/yang/KinectDetection/source/main.cpp -o CMakeFiles/KinectDetection.dir/main.cpp.s
 
 CMakeFiles/KinectDetection.dir/main.cpp.o.requires:
 .PHONY : CMakeFiles/KinectDetection.dir/main.cpp.o.requires
@@ -200,6 +200,6 @@ CMakeFiles/KinectDetection.dir/clean:
 .PHONY : CMakeFiles/KinectDetection.dir/clean
 
 CMakeFiles/KinectDetection.dir/depend:
-	cd /home/liyangyang/KinectDetection/source/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/liyangyang/KinectDetection/source /home/liyangyang/KinectDetection/source /home/liyangyang/KinectDetection/source/build /home/liyangyang/KinectDetection/source/build /home/liyangyang/KinectDetection/source/build/CMakeFiles/KinectDetection.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/yang/KinectDetection/source/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yang/KinectDetection/source /home/yang/KinectDetection/source /home/yang/KinectDetection/source/build /home/yang/KinectDetection/source/build /home/yang/KinectDetection/source/build/CMakeFiles/KinectDetection.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/KinectDetection.dir/depend
 

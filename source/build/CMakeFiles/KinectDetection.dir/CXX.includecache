@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/liyangyang/KinectDetection/source/main.cpp
+/home/yang/KinectDetection/source/main.cpp
 iostream
 -
 pcl/io/pcd_io.h

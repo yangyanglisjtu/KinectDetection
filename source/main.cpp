@@ -16,6 +16,10 @@
 #include <pcl/filters/passthrough.h>
 #include <time.h>
 using namespace std;
+pcl::PointXYZ computerCenter(pcl::PointCloud<pcl::PointXYZ>::Ptr points){
+    pcl::PointXYZ center;
+    return center;
+}
 void seg_cloud(pcl::PointCloud<pcl::PointXYZ>::ConstPtr source)
 {
 	pcl::visualization::PCLVisualizer viewer ("Cluster Viewer"); 
@@ -55,7 +59,7 @@ void seg_cloud(pcl::PointCloud<pcl::PointXYZ>::ConstPtr source)
 	seg.setNormalDistanceWeight(0);
 	seg.setMethodType(pcl::SAC_RANSAC);
 	seg.setMaxIterations(100);
-	seg.setDistanceThreshold(0.005);
+	seg.setDistanceThreshold(0.006);
 	// Segment the largest planar component from the remaining cloud
 	seg.setInputCloud(cloud_filtered);
 	seg.setInputNormals(normals);
@@ -125,6 +129,9 @@ void seg_cloud(pcl::PointCloud<pcl::PointXYZ>::ConstPtr source)
 	        pcl::visualization::PointCloudColorHandlerRandom<pcl::PointXYZ> clusterColorHandle(segmented);
 		//pcl::visualization::PointCloudColorHandler 
 		viewer.addPointCloud(segmented, clusterColorHandle,cloudname);
+                pcl::PointXYZ center=computeCenter(segmented);
+                viewer.addText3D(cloudname,&center);
+                
 	}
 	//viewer.addPointCloud(segmented);
 	while (!viewer.wasStopped()) {

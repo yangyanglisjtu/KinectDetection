@@ -1,1 +1,1 @@
-/home/liyangyang/KinectDetection/source/build/CMakeFiles/KinectDetection.dir
+/home/yang/KinectDetection/source/build/CMakeFiles/KinectDetection.dir
